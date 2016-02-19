@@ -1,0 +1,6 @@
+{
+  "database": {
+    "url": "http://localhost:5984",
+    "name": "sc2bo"
+  }
+}

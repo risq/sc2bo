@@ -1,0 +1,14 @@
+{% extends 'layout/application.html' %}
+
+{% block content %}
+  <h2>Home</h2>
+  <ul>
+    {% for buildOrder in buildOrders %}
+    <li>
+      <a href="/bo/{{ buildOrder._id }}">
+        <b>{{ buildOrder.playerRace | capitalize }}v{{ buildOrder.opponentRace | capitalize }}</b> {{ buildOrder.title }} <i>({{ buildOrder.strategy }})</i>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

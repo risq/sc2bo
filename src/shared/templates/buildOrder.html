@@ -1,0 +1,13 @@
+{% extends 'layout/application.html' %}
+
+{% block content %}
+  <h2><b>{{ buildOrder.playerRace | capitalize }}v{{ buildOrder.opponentRace | capitalize }}</b> {{ buildOrder.title }} <i>({{ buildOrder.strategy }})</i></h2>
+  {{ buildOrder.description }}
+  <ul>
+    {% for step in buildOrder.steps %}
+    <li>
+      <b>{{ step.pop }}</b> ({{ step.time }}) - {{ step.unit }} <br/><i>{{ step.comment }}</i>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
